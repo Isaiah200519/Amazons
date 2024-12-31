@@ -30,7 +30,7 @@ function renderProductsGrid() {
 
   // Handle the case when no products match the search
   if (filteredProducts.length === 0) {
-    productHTML = `<div class="no-products-found">No matching products found for "${search}". <a href="amazon.html">Go back to home page</a></div>`;
+    productHTML = `<div class="no-products-found">No matching products found for "${search}". <a href="index.html">Go back to home page</a></div>`;
   } else {
     filteredProducts.forEach((product) => {
       productHTML += `
@@ -126,12 +126,12 @@ function updateCartQuantity() {
 
 document.querySelector('.js-search-button').addEventListener('click', () => {
   const search = document.querySelector('.js-search-bar').value;
-  window.location.href = `amazon.html?search=${search}`;
+  window.location.href = `index.html?search=${search}`;
 });
 
 document.querySelector('.js-search-bar').addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     const searchTerm = document.querySelector('.js-search-bar').value;
-    window.location.href = `amazon.html?search=${searchTerm}`;
+    window.location.href = `index.html?search=${searchTerm}`;
   }
 });
